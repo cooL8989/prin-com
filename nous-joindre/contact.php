@@ -1,7 +1,7 @@
 <?php
 //get data from form  
 $name = $_POST['Name'];
-$nompany = $_POST['Company'];
+$company = $_POST['Company'];
 $email = $_POST['Email'];
 $phone = $_POST['Phone'];
 $message = $_POST['Message'];

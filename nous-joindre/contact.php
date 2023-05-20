@@ -184,7 +184,7 @@
                            
                                     ?>
 							<form id="wf-form-Formulaire-de-contact" name="wf-form-Formulaire-de-contact"
-								data-name="Formulaire de contact"  action= "contact.php" method="post" class="form-grid-vertical">
+								data-name="Formulaire de contact" method="post" class="form-grid-vertical">
 								
 								<input type="text" class="form-input white w-input" maxlength="256" name="Name"
 									data-name="Name" placeholder="Nom*" id="Name" required>

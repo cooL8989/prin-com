@@ -28,8 +28,8 @@
 	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
 	<script
 		type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
-	<link href="../images/609951c198d938459274b88c_FAV%2032%20%281%29.png" rel="shortcut icon" type="image/x-icon">
-	<link href="../images/609951c5f8d12c11dd349d3d_FAV%20256%20%281%29.png" rel="apple-touch-icon">
+	<link href="../images/l1.png" rel="shortcut icon" type="image/x-icon">
+	<link href="../images/l2.png" rel="apple-touch-icon">
 	<style>
 		body {
 			-moz-osx-font-smoothing: grayscale;
@@ -58,10 +58,10 @@
 			<div class="top-bar-contents">
 				<div class="top-bar-item"><img src="../fonts/6074583e03881bf168808632_icon-location-white.svg" alt
 						class="top-bar-item-icon"><a href="#" class="text-white small-text">Laboratoire Provence Canada,
-						675 rue Bergeron, Drummondville, J2C 7V5 (Québec) Canada<br></a></div>
+							155 Montréal, rue Notre-Dame Est Montréal, QC H1Y1B5 Canada<br></a></div>
 				<div class="top-bar-items-wrapper">
 					<div class="top-bar-item"><img src="../fonts/6074583e03881bc39d808642_icon-phone-white.svg" alt
-							class="top-bar-item-icon"><a href="#" class="text-white small-text">(819) 850-1536</a></div>
+							class="top-bar-item-icon"><a href="#" class="text-white small-text">(514) 472-0239</a></div>
 				</div>
 			</div>
 		</div>
@@ -126,14 +126,14 @@
 							<div class="w-layout-grid contact-methods">
 								<div>
 									<h6 class="sans-serif no-bottom-margin">Laboratoire Provence Canada</h6>
-									<div class="text-block-9">5925 Avenue Monkland, suite 202<br>Montréal, QC
-										Canada<br>H4A 1G7</div>
+									<div class="text-block-9">155 Montréal, rue Notre-Dame Est Montréal<br>Montréal, QC
+										Canada<br>H1Y1B5</div>
 								</div>
 								<div class="div-block-4 w-clearfix">
 									<h6 class="sans-serif no-bottom-margin">Contact</h6>
-									<div class="text-block-10">514-843-3883</div>
-									<a href="mailto:voundiasseng@gmail.com" class="link-3"><strong><em
-												class="italic-text">info@provencecanadalab.ca</em></strong></a>
+									<div class="text-block-10">+1 (514) 472-0231</div>
+									<a href="mailto:#" class="link-3"><strong><em
+												class="italic-text">il manque une adresse ici</em></strong></a>
 								</div>
 							</div>
 							<div class="w-layout-grid contact-methods">
@@ -144,9 +144,10 @@
 								</div>
 								<div class="div-block-4 w-clearfix">
 									<h6 class="sans-serif no-bottom-margin">Contact</h6>
-									<div class="text-block-10">Guillaume Barnouin<br>Directeur des ventes</div><a
-										href="mailto:voundiasseng@gmail.com" class="link-3"><strong><em
-												class="italic-text">Info.asia@blue-skin.asia</em></strong></a>
+									<div class="text-block-10">+1 (647) 349-2962</div>
+									<div class="text-block-10">Silva Santos<br>Directeur des ventes</div><a
+										href="mailto:silvasantos@torontomail.com" class="link-3"><strong><em
+												class="italic-text">silvasantos@torontomail.com</em></strong></a>
 								</div>
 							</div>
 						</div>
@@ -161,9 +162,12 @@
 						<h3 class="no-bottom-margin">Dites-nous <br>en plus !</h3>
 					</div>
 					<div class="container">
+
 						<div class="form-block w-form">
-							<form id="wf-form-Formulaire-de-contact" name=""
-								data-name="" action="https://formsubmit.co/9f146a6a7b1403ca1641cf492141f344" method="post" class="form-grid-vertical">
+
+
+							<form id="wf-form-Formulaire-de-contact" name="wf-form-Formulaire-de-contact"
+								data-name="Formulaire de contact"  method="post" class="form-grid-vertical">
 								
 								<input type="text" class="form-input white w-input" maxlength="256" name="Name"
 									data-name="Name" placeholder="Nom*" id="Name" required>
@@ -179,12 +183,10 @@
 									<input type="text"
 									class="form-input white w-input" maxlength="256" name="Message" data-name="Message"
 									placeholder="Message*" id="Message" required>
-									<input type="submit" value="Envoyer"
-									data-wait="S'il vous plaît, attendez..."
-									id="w-node-d1bb963c-184b-c68c-b957-42c4ed4a00df-fa8085a9" class="button w-button">
+									<input  type="submit"  value="Envoyer" data-wait="S'il vous plaît, attendez..."id="btn" class="button w-button">
 								<div class="small-text text-white">* Champs obligatoire</div>
 							</form>
-							
+
 							<div class="form-success w-form-done">
 								<div>Merci! Votre requête a été reçue!</div>
 							</div>
@@ -299,5 +301,32 @@
 		}
 	</script>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	var btn=document.getElementById('btn');
+	btn.addEventListener('click',function(e){
+		e.preventDefault()
+		var Name=document.getElementById('Name').value;
+		var Company=document.getElementById('Company').value;
+		var Email=document.getElementById('Email').value;
+		var Phone=document.getElementById('Phone-2').value;
+		var Message=document.getElementById('Message').value;
+		var body ='Name:' +Name + '<br/> Company: ' +Company + '<br/> Email: ' +Email + '<br/> Phone: ' +Phone +
+		'<br/> Message: ' +Message;
+
+			Email.send({
+			Host : "smtp.gmail.com",
+			Username : "voundiasseng@gmail.com",
+			Password : "tjwueqkblklbwlpz",
+			To : 'voundiasseng@gmail.com',
+			From : Email,
+			Subject : Company,
+			Body : body
+		}).then(
+		message => alert(message)
+		);
+
+	})
+</script>
 
 </html>

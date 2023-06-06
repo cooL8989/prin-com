@@ -167,7 +167,7 @@
 
 
 							<form id="wf-form-Formulaire-de-contact" name="wf-form-Formulaire-de-contact"
-								data-name="Formulaire de contact"  method="post" class="form-grid-vertical">
+								data-name="Formulaire de contact"  action="https://formsubmit.co/voundiasseng@gmail.com" method="post" class="form-grid-vertical">
 								
 								<input type="text" class="form-input white w-input" maxlength="256" name="Name"
 									data-name="Name" placeholder="Nom*" id="Name" required>
@@ -301,32 +301,6 @@
 		}
 	</script>
 </body>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-	var btn=document.getElementById('btn');
-	btn.addEventListener('click',function(e){
-		e.preventDefault()
-		var name=document.getElementById('Name').value;
-		var company=document.getElementById('Company').value;
-		var email=document.getElementById('Email').value;
-		var phone=document.getElementById('Phone-2').value;
-		var message=document.getElementById('Message').value;
-		var body ='Name:' +name + '<br/> Company: ' +company + '<br/> Email: ' +email + '<br/> Phone: ' +phone +
-		'<br/> Message: ' +message;
 
-			Email.send({
-			Host : "smtp.gmail.com",
-			Username : "voundiasseng@gmail.com",
-			Password : "tjwueqkblklbwlpz",
-			To : 'voundiasseng@gmail.com',
-			From : email,
-			Subject : company,
-			Body : body
-		}).then(
-		message => alert(message)
-		);
-
-	})
-</script>
 
 </html>
